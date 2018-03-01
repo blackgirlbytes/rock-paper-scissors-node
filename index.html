@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Rock, Paper, Scissors</h1>
+      <h2 id="outcome"></h2>
+      <h3 id=player>Player:</h3>
+      <h3 id=computer>Computer:</h3>
+    <button id="rock" type="button" name="button">Rock</button>
+    <button id="paper" type="button" name="button">Paper</button>
+    <button id="scissors" type="button" name="button">Scissors</button>
+    <script type="text/javascript">
+
+    var total=0
+    var playerScore=0
+    var compScore=0
+      //what can the user see
+        //user can see three buttons --rock, paper, and Scissors
+
+
+        //user can see if they won or lost
+
+      //what can the user do
+        //the user can click the buttons --rock, paper, or scissor
+        //User clicks Rock
+        document.getElementById('rock').onclick=PlayerPressedRocked
+        document.getElementById('paper').onclick=PlayerPressedPaper
+        document.getElementById('scissors').onclick=PlayerPressedScissors
+          //game runs
+          //i
+          function PlayerPressedRocked(){
+            var rock = Math.random();
+              if(rock < .3){
+                console.log(rock)
+                document.getElementById('outcome').innerHTML="You won! Computer played scissors"
+                playerScore +=total +1
+                document.getElementById('player').innerHTML="player:"+playerScore
+              }else if(rock >= .3 && rock <=.66){
+                console.log(rock)
+                document.getElementById('outcome').innerHTML="You lose! Computer played played"
+                compScore+=total +1
+                document.getElementById('computer').innerHTML="computer:"+compScore
+              }else if(rock >= .66 && rock <=1){
+                console.log(rock)
+                document.getElementById('outcome').innerHTML="You and the Computer Tied"
+              }
+            }
+            function PlayerPressedPaper(){
+              var paper = Math.random();
+                if(paper < .5){
+                  console.log(paper)
+                  document.getElementById('outcome').innerHTML="You won! Computer played scissors"
+                  playerScore +=total +1
+                  document.getElementById('player').innerHTML="player:"+playerScore
+                }else if(paper >= .5 && paper <=1){
+                  console.log(paper)
+                  document.getElementById('outcome').innerHTML="You lose! Computer played paper"
+                  compScore +=total +1
+                  document.getElementById('computer').innerHTML="computer:"+compScore
+                }else if(paper >= .66 && paper <=1){
+                  console.log(paper)
+                  document.getElementById('outcome').innerHTML="You and the Computer Tied"
+                }
+              }
+              function PlayerPressedScissors(){
+                var scissors = Math.random();
+                  if(scissors < .5){
+                    console.log(scissors)
+                    document.getElementById('outcome').innerHTML="You won! Computer played paper"
+                    playerScore +=total +1
+                    document.getElementById('player').innerHTML="player:"+playerScore
+                  }else if(scissors >= .5 && scissors<=1){
+                    console.log(scissors)
+                    document.getElementById('outcome').innerHTML="You lose! Computer played rock"
+                    compScore +=total +1
+                    document.getElementById('computer').innerHTML="computer:"+compScore
+                  }else if(scissors >= .66 && scissors <=1){
+                    console.log(scissors)
+                    document.getElementById('outcome').innerHTML="You and the Computer Tied"
+                  }
+              }
+          //print result of win or lose
+        //User clicks Paper
+          //game runs
+          //print result of win or lose
+        //User clicks scissors
+          //game runs
+          //print result of win or lose
+      //what can the user expect
+        //the user expect to win or lose depending on the outcome of the button click
+    </script>
+  </body>
+</html>
